@@ -99,12 +99,14 @@
 		A663B2512025251B004E5B85 /* TimBurtons */ = {
 			isa = PBXGroup;
 			children = (
+				A663B2882025312F004E5B85 /* Helpers */,
+				A663B283202525F4004E5B85 /* Controllers */,
+				A663B282202525E6004E5B85 /* Models */,
+				A663B287202526EC004E5B85 /* Networking */,
+				A663B2852025266D004E5B85 /* Resources */,
+				A663B28420252602004E5B85 /* Storyboards */,
+				A663B286202526E7004E5B85 /* View */,
 				A663B2522025251B004E5B85 /* AppDelegate.swift */,
-				A663B2542025251B004E5B85 /* FirstViewController.swift */,
-				A663B2562025251B004E5B85 /* SecondViewController.swift */,
-				A663B2582025251B004E5B85 /* Main.storyboard */,
-				A663B25B2025251B004E5B85 /* Assets.xcassets */,
-				A663B25D2025251B004E5B85 /* LaunchScreen.storyboard */,
 				A663B2602025251B004E5B85 /* Info.plist */,
 			);
 			path = TimBurtons;
@@ -126,6 +128,60 @@
 				A663B2762025251B004E5B85 /* Info.plist */,
 			);
 			path = TimBurtonsUITests;
+			sourceTree = "<group>";
+		};
+		A663B282202525E6004E5B85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A663B283202525F4004E5B85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A663B2542025251B004E5B85 /* FirstViewController.swift */,
+				A663B2562025251B004E5B85 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A663B28420252602004E5B85 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A663B2582025251B004E5B85 /* Main.storyboard */,
+				A663B25D2025251B004E5B85 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A663B2852025266D004E5B85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A663B25B2025251B004E5B85 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A663B286202526E7004E5B85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A663B287202526EC004E5B85 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A663B2882025312F004E5B85 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +375,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A663B2772025251B004E5B85 /* Debug */ = {
+		A663B2772025251B004E5B85 /* Debug Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -374,9 +430,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug Dev";
 		};
-		A663B2782025251B004E5B85 /* Release */ = {
+		A663B2782025251B004E5B85 /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -424,9 +480,9 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release Production";
 		};
-		A663B27A2025251B004E5B85 /* Debug */ = {
+		A663B27A2025251B004E5B85 /* Debug Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -438,9 +494,9 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug Dev";
 		};
-		A663B27B2025251B004E5B85 /* Release */ = {
+		A663B27B2025251B004E5B85 /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -452,9 +508,9 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "Release Production";
 		};
-		A663B27D2025251B004E5B85 /* Debug */ = {
+		A663B27D2025251B004E5B85 /* Debug Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -468,9 +524,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimBurtons.app/TimBurtons";
 			};
-			name = Debug;
+			name = "Debug Dev";
 		};
-		A663B27E2025251B004E5B85 /* Release */ = {
+		A663B27E2025251B004E5B85 /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -484,9 +540,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimBurtons.app/TimBurtons";
 			};
-			name = Release;
+			name = "Release Production";
 		};
-		A663B2802025251B004E5B85 /* Debug */ = {
+		A663B2802025251B004E5B85 /* Debug Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -499,9 +555,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TimBurtons;
 			};
-			name = Debug;
+			name = "Debug Dev";
 		};
-		A663B2812025251B004E5B85 /* Release */ = {
+		A663B2812025251B004E5B85 /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -514,7 +570,211 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TimBurtons;
 			};
-			name = Release;
+			name = "Release Production";
+		};
+		A663B28920253163004E5B85 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Staging";
+		};
+		A663B28A20253163004E5B85 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Staging";
+		};
+		A663B28B20253163004E5B85 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimBurtons.app/TimBurtons";
+			};
+			name = "Debug Staging";
+		};
+		A663B28C20253163004E5B85 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtonsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimBurtons;
+			};
+			name = "Debug Staging";
+		};
+		A663B28D20253170004E5B85 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Production";
+		};
+		A663B28E20253170004E5B85 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Production";
+		};
+		A663B28F20253170004E5B85 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimBurtons.app/TimBurtons";
+			};
+			name = "Debug Production";
+		};
+		A663B29020253170004E5B85 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TimBurtonsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.TimBurtonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimBurtons;
+			};
+			name = "Debug Production";
 		};
 /* End XCBuildConfiguration section */
 
@@ -522,38 +782,46 @@
 		A663B24A2025251B004E5B85 /* Build configuration list for PBXProject "TimBurtons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A663B2772025251B004E5B85 /* Debug */,
-				A663B2782025251B004E5B85 /* Release */,
+				A663B2772025251B004E5B85 /* Debug Dev */,
+				A663B28D20253170004E5B85 /* Debug Production */,
+				A663B28920253163004E5B85 /* Debug Staging */,
+				A663B2782025251B004E5B85 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 		A663B2792025251B004E5B85 /* Build configuration list for PBXNativeTarget "TimBurtons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A663B27A2025251B004E5B85 /* Debug */,
-				A663B27B2025251B004E5B85 /* Release */,
+				A663B27A2025251B004E5B85 /* Debug Dev */,
+				A663B28E20253170004E5B85 /* Debug Production */,
+				A663B28A20253163004E5B85 /* Debug Staging */,
+				A663B27B2025251B004E5B85 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 		A663B27C2025251B004E5B85 /* Build configuration list for PBXNativeTarget "TimBurtonsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A663B27D2025251B004E5B85 /* Debug */,
-				A663B27E2025251B004E5B85 /* Release */,
+				A663B27D2025251B004E5B85 /* Debug Dev */,
+				A663B28F20253170004E5B85 /* Debug Production */,
+				A663B28B20253163004E5B85 /* Debug Staging */,
+				A663B27E2025251B004E5B85 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 		A663B27F2025251B004E5B85 /* Build configuration list for PBXNativeTarget "TimBurtonsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A663B2802025251B004E5B85 /* Debug */,
-				A663B2812025251B004E5B85 /* Release */,
+				A663B2802025251B004E5B85 /* Debug Dev */,
+				A663B29020253170004E5B85 /* Debug Production */,
+				A663B28C20253163004E5B85 /* Debug Staging */,
+				A663B2812025251B004E5B85 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 /* End XCConfigurationList section */
 	};
