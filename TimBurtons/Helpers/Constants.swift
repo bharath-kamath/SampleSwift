@@ -25,3 +25,8 @@ enum TBFonts {
     static let SubText = UIFont.systemFont(ofSize: SubTextSize)
     
 }
+
+
+enum APIEndPoints {
+    static let GetProducts = "/v1/products"
+}
