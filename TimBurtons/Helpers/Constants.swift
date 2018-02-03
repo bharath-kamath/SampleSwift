@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Enum for App related colors
 enum TBColors {
     static let AppTheme = UIColor(red: 1.0, green: 0.1491, blue: 0.0, alpha: 1.0)
     static let AppBackground = UIColor(red: 0.0, green: 0.5628, blue: 0.3188, alpha: 1.0)
@@ -18,6 +19,7 @@ enum TBColors {
     }
 }
 
+// Enum for App Font Size and Names
 enum TBFonts {
     static let PrimaryTextSize: CGFloat = 16.0
     static let SubTextSize: CGFloat = 14.0
@@ -26,7 +28,7 @@ enum TBFonts {
     
 }
 
-
+// Enum for API Methods
 enum APIEndPoints {
     static let GetProducts = "/v1/products"
 }

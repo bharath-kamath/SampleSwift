@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Enum which holds the environment specific paths and data
 enum Environment: String {
     case Dev = "dev"
     case Staging = "staging"
@@ -25,6 +26,7 @@ enum Environment: String {
     
 }
 
+// Struct to toggle between different environments
 struct Configuration {
     lazy var environment: Environment = {
         if let configuration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String {
