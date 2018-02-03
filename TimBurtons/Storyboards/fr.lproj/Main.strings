@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "9eP-EW-Ky2"; */
+"9eP-EW-Ky2.title" = "Home";
+
+/* Class = "UILabel"; text = "Loaded by FirstViewController"; ObjectID = "A5M-7J-77L"; */
+"A5M-7J-77L.text" = "Loaded by FirstViewController";
+
+/* Class = "UINavigationItem"; title = "Tim Burtons"; ObjectID = "HbO-zY-oqU"; */
+"HbO-zY-oqU.title" = "Tim Burtons";
+
+/* Class = "UILabel"; text = "First View"; ObjectID = "KQZ-1w-vlD"; */
+"KQZ-1w-vlD.text" = "First View";
+
+/* Class = "UITabBarItem"; title = "Products"; ObjectID = "LwN-Jl-9Zv"; */
+"LwN-Jl-9Zv.title" = "Products";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Home";
