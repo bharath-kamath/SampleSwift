@@ -8,13 +8,13 @@
 
 import UIKit
 
-// Enum which holds the environment specific paths and data
+/// Enum which holds the environment specific data (URL, API Key, Tokens etc)
 enum Environment: String {
     case Dev = "dev"
     case Staging = "staging"
     case Production = "production"
     
-    // BaseURL for the APIs
+    /// Base URL for APIs
     var baseURL: String {
         switch self {
             case .Dev: return "https://dev-api.timburtons.com"
@@ -23,10 +23,24 @@ enum Environment: String {
         }
     }
     
-    
+    /// Google API key for requesting address info
+    var googleAPIKey: String {
+        switch self {
+            case .Dev: return "IREOES-SDBSDBMSD"
+            case .Staging: return "SHJSJKDS-SSDMSDSDK"
+            case .Production: return "DHJSDWPW-SBSMSNDS"
+        }
+    }
 }
 
-// Struct to toggle between different environments
+/**
+ Struct to generate environment variables based on different build scheme
+ 
+ - note: To switch between Dev/Stage/Production configurations, toggle between the various build scheme and to edit the
+  individual config details, edit the value in the Environment Enum.
+ 
+ - seealso: Environment
+ */
 struct Configuration {
     lazy var environment: Environment = {
         if let configuration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String {
@@ -39,4 +53,15 @@ struct Configuration {
         }
         return Environment.Production
     }()
+    
+    /**
+     testing this func
+     - returns: Bool
+     - Parameter code: Int value to signifiy
+     - parameter err: String
+     - Throws: error lists
+     */
+    func testing(code: Int, err: String) -> Bool {
+        return true
+    }
 }
