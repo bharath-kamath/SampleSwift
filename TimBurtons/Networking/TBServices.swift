@@ -49,12 +49,15 @@ class TBServices: TBServiceProtocol {
         }*/
         
         let url = Bundle.main.url(forResource: "products", withExtension: "json")!
-        guard let jsonData = try? Data(contentsOf: url), let productsArray = try? JSONDecoder().decode(Cart.self, from: jsonData)  else {
-            
-            return
+        do {
+            let jsonData = try Data(contentsOf: url)
+            let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)
+            completionHandler(productsArray.products, nil)
         }
-        
-        completionHandler(productsArray.products, nil)
+        catch let error {
+            print(error)
+            completionHandler(nil, "Error - Could not decode the JSON response")
+        }
     }
     
     

@@ -15,10 +15,12 @@ class ProductsViewController: UIViewController {
 
     var productsList: [Product] = []
     var productsService = TBServices()
+    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableview.tableFooterView = UIView()
+        
         fetchProducts(productService: productsService)
     }
 
@@ -31,7 +33,7 @@ class ProductsViewController: UIViewController {
             else if let productsL = products  {
                 self?.productsList = productsL
             }
-//            tableview.reloadData()
+            self?.tableview.reloadData()
         })
     }
     
@@ -45,4 +47,29 @@ class ProductsViewController: UIViewController {
     }
     */
 
+}
+
+extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.productsList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
+        
+        let item = self.productsList[indexPath.row]
+        cell.configure(name: item.name, cost: "\(item.cost)")
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 62.0
+    }
+    
+    // When user taps cell, play the local file, if it's downloaded
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
