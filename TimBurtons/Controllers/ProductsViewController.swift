@@ -13,18 +13,28 @@ import UIKit
 
 class ProductsViewController: UIViewController {
 
+    var productsList: [Product] = []
+    var productsService = TBServices()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        fetchProducts(productService: productsService)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func fetchProducts(productService: TBServiceProtocol) {
+        productService.getProducts(completionHandler: {[weak self]  products, errorMessage in
+            if let error = errorMessage {
+                print("API ERROR - \(error)")
+            }
+            else if let productsL = products  {
+                self?.productsList = productsL
+            }
+//            tableview.reloadData()
+        })
     }
     
-
     /*
     // MARK: - Navigation
 

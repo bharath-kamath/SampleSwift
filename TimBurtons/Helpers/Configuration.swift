@@ -41,7 +41,7 @@ enum Environment: String {
  
  - seealso: Environment
  */
-struct Configuration {
+class Configuration {
     lazy var environment: Environment = {
         if let configuration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String {
             if configuration.contains("Staging") {
@@ -64,4 +64,10 @@ struct Configuration {
     func testing(code: Int, err: String) -> Bool {
         return true
     }
+}
+
+class QAConfig: Configuration {
+    override lazy var environment: Environment = {
+        return Environment.Dev
+    }()
 }
