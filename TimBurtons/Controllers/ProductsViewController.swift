@@ -20,8 +20,7 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.tableFooterView = UIView()
-        
-        fetchProducts(productService: productsService)
+        fetchProducts(productService: productsService)        
     }
 
     

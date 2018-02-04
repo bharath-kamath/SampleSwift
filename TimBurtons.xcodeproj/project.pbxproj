@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A65C2B5E20272F3200753C7F /* TBServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */; };
+		A65C2B60202736BE00753C7F /* TBModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B5F202736BE00753C7F /* TBModelTests.swift */; };
+		A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6120273AD600753C7F /* TBDataHelper.swift */; };
+		A65C2B6420273E2800753C7F /* TBProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6320273E2800753C7F /* TBProductsTests.swift */; };
+		A65C2B672027435300753C7F /* TestTBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B662027435300753C7F /* TestTBServices.swift */; };
 		A663B2532025251B004E5B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A663B2522025251B004E5B85 /* AppDelegate.swift */; };
 		A663B25A2025251B004E5B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A663B2582025251B004E5B85 /* Main.storyboard */; };
 		A663B25C2025251B004E5B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A663B25B2025251B004E5B85 /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 
 /* Begin PBXFileReference section */
 		A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBServiceProtocol.swift; sourceTree = "<group>"; };
+		A65C2B5F202736BE00753C7F /* TBModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBModelTests.swift; sourceTree = "<group>"; };
+		A65C2B6120273AD600753C7F /* TBDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBDataHelper.swift; sourceTree = "<group>"; };
+		A65C2B6320273E2800753C7F /* TBProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBProductsTests.swift; sourceTree = "<group>"; };
+		A65C2B662027435300753C7F /* TestTBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTBServices.swift; sourceTree = "<group>"; };
 		A663B24F2025251B004E5B85 /* TimBurtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimBurtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A663B2522025251B004E5B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A663B2592025251B004E5B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A65C2B652027432B00753C7F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A65C2B662027435300753C7F /* TestTBServices.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		A663B2462025251B004E5B85 = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +151,7 @@
 				A663B2882025312F004E5B85 /* Helpers */,
 				A663B283202525F4004E5B85 /* Controllers */,
 				A663B282202525E6004E5B85 /* Models */,
-				A663B287202526EC004E5B85 /* Networking */,
+				A663B287202526EC004E5B85 /* Managers */,
 				A663B2852025266D004E5B85 /* Resources */,
 				A663B28420252602004E5B85 /* Storyboards */,
 				A663B286202526E7004E5B85 /* View */,
@@ -148,8 +164,11 @@
 		A663B2682025251B004E5B85 /* TimBurtonsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A65C2B652027432B00753C7F /* Managers */,
 				A663B2692025251B004E5B85 /* TimBurtonsTests.swift */,
 				A663B26B2025251B004E5B85 /* Info.plist */,
+				A65C2B5F202736BE00753C7F /* TBModelTests.swift */,
+				A65C2B6320273E2800753C7F /* TBProductsTests.swift */,
 			);
 			path = TimBurtonsTests;
 			sourceTree = "<group>";
@@ -212,14 +231,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A663B287202526EC004E5B85 /* Networking */ = {
+		A663B287202526EC004E5B85 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				A6F539C3202656250031D7B9 /* APIManager.swift */,
 				A6F539C92026608A0031D7B9 /* TBServices.swift */,
 				A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */,
 			);
-			path = Networking;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		A663B2882025312F004E5B85 /* Helpers */ = {
@@ -227,6 +246,7 @@
 			children = (
 				A663B2912025336E004E5B85 /* Configuration.swift */,
 				A663B293202538C5004E5B85 /* Constants.swift */,
+				A65C2B6120273AD600753C7F /* TBDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -372,6 +392,7 @@
 				A663B294202538C5004E5B85 /* Constants.swift in Sources */,
 				A6F539C820265EE10031D7B9 /* Cart.swift in Sources */,
 				A6F539C62026565B0031D7B9 /* Product.swift in Sources */,
+				A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */,
 				A663B2532025251B004E5B85 /* AppDelegate.swift in Sources */,
 				A6F539B220260AFF0031D7B9 /* StoryboardSupport.swift in Sources */,
 				A6F539D220268D500031D7B9 /* ProductTableViewCell.swift in Sources */,
@@ -390,6 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A663B26A2025251B004E5B85 /* TimBurtonsTests.swift in Sources */,
+				A65C2B672027435300753C7F /* TestTBServices.swift in Sources */,
+				A65C2B60202736BE00753C7F /* TBModelTests.swift in Sources */,
+				A65C2B6420273E2800753C7F /* TBProductsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

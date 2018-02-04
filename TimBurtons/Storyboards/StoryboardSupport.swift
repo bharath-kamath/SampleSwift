@@ -15,23 +15,27 @@ protocol StoryboardIdentifiable {
     static var storyboardIdentifier: String { get }
 }
 
-extension UIViewController: StoryboardIdentifiable {
+extension StoryboardIdentifiable where Self: UIViewController {
     static var storyboardIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UICollectionViewCell: StoryboardIdentifiable {
+extension StoryboardIdentifiable where Self: UICollectionViewCell {
     static var storyboardIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UITableViewCell: StoryboardIdentifiable {
+extension StoryboardIdentifiable where Self: UITableViewCell {
     static var storyboardIdentifier: String {
         return String(describing: self)
     }
 }
+
+extension UIViewController: StoryboardIdentifiable { }
+extension UICollectionViewCell: StoryboardIdentifiable { }
+extension UITableViewCell: StoryboardIdentifiable { }
 
 
 extension UIStoryboard {
