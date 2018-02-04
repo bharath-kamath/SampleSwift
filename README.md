@@ -7,17 +7,15 @@ DESCRIPTION:
 
 This is a basic shell app to get quickly started with development.
 
-===========================================================================
-BUILD REQUIREMENTS:
+
+#BUILD REQUIREMENTS:
  
-iOS SDK 10.0 or later
+iOS SDK 10.0 or later, Swift 4, Xcode 9.0 and above
  
-===========================================================================
-RUNTIME REQUIREMENTS:
+
+#RUNTIME REQUIREMENTS:
  
-iOS 10.0, Swift 4
- 
-===========================================================================
+iOS 10.0,
 
 =============================================================================
 
