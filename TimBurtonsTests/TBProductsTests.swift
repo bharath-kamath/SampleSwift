@@ -34,7 +34,7 @@ class TBProductsTests: XCTestCase {
         let localFetchService = TestTBServices()
         viewController.fetchProducts(productService: localFetchService)
         
-        // Test that the MinionService was actually called
+        // Test that the LocalFetch was actually called
         XCTAssertTrue(localFetchService.getProductsWasCalled, "Local Fetch Products was not called")
         
         // Test injected products were assigned

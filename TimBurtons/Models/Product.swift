@@ -21,3 +21,4 @@ extension Product: Equatable {
     }
     
 }
+

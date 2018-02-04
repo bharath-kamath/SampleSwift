@@ -11,10 +11,11 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: BaseViewController {
 
     var productsList: [Product] = []
     var productsService = TBServices()
+    var emptyTableMessage = "Please wait while we check with our Kitchen!"
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
@@ -25,9 +26,11 @@ class ProductsViewController: UIViewController {
 
     
     func fetchProducts(productService: TBServiceProtocol) {
+        
         productService.getProducts(completionHandler: {[weak self]  products, errorMessage in
             if let error = errorMessage {
                 print("API ERROR - \(error)")
+                self?.emptyTableMessage = error
             }
             else if let productsL = products  {
                 self?.productsList = productsL                

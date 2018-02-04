@@ -15,6 +15,7 @@ class TBServices: TBServiceProtocol {
     var dataTask: URLSessionDataTask?
     
     func getProducts(completionHandler: @escaping ([Product]?, String?) -> Void) {
+
         /*
         dataTask?.cancel()
         
@@ -23,9 +24,7 @@ class TBServices: TBServiceProtocol {
             
             guard let url = urlComponents.url else { return }
             
-//            let request =  APIManager.getRequest(method: APIEndPoints.GetProducts)
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
+         let request =  APIManager.getRequestObject(method: "GET", baseURL: Configuration.shared.environment.baseURL, queryParams: APIEndPoints.GetProducts, header: "Auth:XX")
             
             dataTask = defaultSession.dataTask(with: request) { data, response, error in
                 
@@ -45,7 +44,10 @@ class TBServices: TBServiceProtocol {
             dataTask?.resume()
         }*/
             
-        let url = Bundle.main.url(forResource: "products", withExtension: "json")!
+        guard let url = Bundle.main.url(forResource: "products", withExtension: "json") else {
+            completionHandler(nil, "Error - Could not read data from the json file")
+            return
+        }
         do {
             let jsonData = try Data(contentsOf: url)
             let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)

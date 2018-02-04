@@ -41,22 +41,26 @@ enum Environment: String {
  
  - seealso: Environment
  */
+
 class Configuration {
-    lazy var environment: Environment = {
+    let environment: Environment
+    static let shared = Configuration()
+    private init() {
         if let configuration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String {
             if configuration.contains("Staging") {
-                return Environment.Staging
+                environment = Environment.Staging
+                return
             }
             else if configuration.contains("Dev") {
-                return Environment.Dev
+                environment = Environment.Dev
+                return
             }
         }
-        return Environment.Production
-    }()
+        environment = Environment.Production
+    }
+    
+    init(environment: Environment) {
+        self.environment = environment
+    }
 }
 
-class QAConfig: Configuration {
-    override lazy var environment: Environment = {
-        return Environment.Dev
-    }()
-}
