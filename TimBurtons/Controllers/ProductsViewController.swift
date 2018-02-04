@@ -31,7 +31,7 @@ class ProductsViewController: UIViewController {
                 print("API ERROR - \(error)")
             }
             else if let productsL = products  {
-                self?.productsList = productsL
+                self?.productsList = productsL                
             }
             self?.tableview.reloadData()
         })
@@ -49,6 +49,7 @@ class ProductsViewController: UIViewController {
 
 }
 
+/// TableView delegate and datasource extension to configure the cell
 extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.productsList.count
@@ -58,13 +59,8 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
         
         let item = self.productsList[indexPath.row]
-        cell.configure(name: item.name, cost: "\(item.cost)")
-        
+        cell.configure(name: item.name, cost: item.costString(symbol: "$"))        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 62.0
     }
     
     // When user taps cell, play the local file, if it's downloaded

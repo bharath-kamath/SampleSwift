@@ -53,17 +53,6 @@ class Configuration {
         }
         return Environment.Production
     }()
-    
-    /**
-     testing this func
-     - returns: Bool
-     - Parameter code: Int value to signifiy
-     - parameter err: String
-     - Throws: error lists
-     */
-    func testing(code: Int, err: String) -> Bool {
-        return true
-    }
 }
 
 class QAConfig: Configuration {

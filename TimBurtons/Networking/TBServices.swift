@@ -8,10 +8,7 @@
 
 import UIKit
 
-protocol TBServiceProtocol {
-    func getProducts(completionHandler: @escaping ([Product]?, String?) -> Void)
-}
-
+/// Class for providing data that conforms to TBServiceProtocol
 class TBServices: TBServiceProtocol {
     
     let defaultSession = URLSession(configuration: .default)
@@ -47,11 +44,12 @@ class TBServices: TBServiceProtocol {
             }
             dataTask?.resume()
         }*/
-        
+            
         let url = Bundle.main.url(forResource: "products", withExtension: "json")!
         do {
             let jsonData = try Data(contentsOf: url)
             let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)
+            print("total is \(productsArray.total)")
             completionHandler(productsArray.products, nil)
         }
         catch let error {
