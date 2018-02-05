@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/// Enum that captures various API error
 enum APIError: Error {
     case requestFailed
     case jsonConversionFailure
@@ -26,6 +26,7 @@ enum APIError: Error {
     }
 }
 
+/// Protocol with Generic types that can be conformed by various API managers to make API calls
 protocol APIClient {
     
     var session: URLSession { get }
@@ -63,6 +64,12 @@ extension APIClient {
         return task
     }
     
+    /**
+     Default implementation of generic fetch function
+     - Parameter request: URLRequest
+     - parameter decode: Closure that decodes generic type to required entity
+     - parameter completion: Closure to be called on completion that accepts Result enum
+     */
     func fetch<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         
         let task = decodingTask(with: request, decodingType: T.self) { (json , error) in

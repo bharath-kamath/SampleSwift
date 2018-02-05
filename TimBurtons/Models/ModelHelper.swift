@@ -6,10 +6,6 @@
 //  Copyright © 2018 Bharath Kamath. All rights reserved.
 //
 
-protocol IDEquivalnce {
-    
-}
-
 extension Product {
     /**
      Function to return formatted String for Product cost

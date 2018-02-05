@@ -6,6 +6,7 @@
 //  Copyright © 2018 Bharath Kamath. All rights reserved.
 //
 
+/// Class to manage Analytics
 class AnalyticsManager {
     
     // MARK: - Properties
@@ -20,7 +21,11 @@ class AnalyticsManager {
         self.googleAnalytics = GoogleAnalytics(appKey: appKey)
     }
     
-    
+    /**
+     Function to return formatted String for Product cost
+     - Parameter screenName: Name of screen to be logged
+     - parameter userId: Option userId to tag screen view
+     */
     func logScreenEvent(screenName: String, userId: String = "0")  {
         print("log event \(screenName)")
         // call GA

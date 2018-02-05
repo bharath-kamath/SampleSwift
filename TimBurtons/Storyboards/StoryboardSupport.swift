@@ -39,26 +39,7 @@ extension UITableViewCell: StoryboardIdentifiable { }
 
 
 extension UIStoryboard {
-    
-    /**
-     Enum for listing all the storyboards in the project.
-     
-     - note: All storybaords in the project should be named here.
-     */
-    enum Storyboard: String {
-        case Main
-        case Products
-        case LaunchScreen
-    }
-    
-    convenience init(storyboard: Storyboard, bundle: Bundle? = nil) {
-        self.init(name: storyboard.rawValue, bundle: bundle)
-    }
-    
-    class func storyboard(storyboard: Storyboard, bundle: Bundle?) -> UIStoryboard {
-        return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
-    }
-    
+        
     /**
      Helper function to instantiate Viewcontroller
      

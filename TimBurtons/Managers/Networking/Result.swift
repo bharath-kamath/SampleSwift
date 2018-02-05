@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/// Generic type to pass result for api
 enum Result<T, U> where U: Error  {
     case success(T)
     case failure(U)

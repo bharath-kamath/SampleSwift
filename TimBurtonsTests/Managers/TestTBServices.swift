@@ -17,7 +17,7 @@ class TestTBServices: ProductServiceProtocol {
     var products: [Product]?
     var filename = "products"
     ///function to mock get Products 
-    func getProducts(completionHandler: @escaping (Result<Cart?, APIError>) -> Void) {
+    func getProducts(completionHandler: @escaping (Result<ProductResults?, APIError>) -> Void) {
         getProductsWasCalled = true
         
         guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
@@ -26,7 +26,7 @@ class TestTBServices: ProductServiceProtocol {
         }
         do {
             let jsonData = try Data(contentsOf: url)
-            let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)
+            let productsArray = try JSONDecoder().decode(ProductResults.self, from: jsonData)
             self.products = productsArray.products
             print("total is \(productsArray.total)")
             completionHandler(Result.success(productsArray))

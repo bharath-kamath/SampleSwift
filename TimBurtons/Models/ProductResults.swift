@@ -1,13 +1,13 @@
 //
-//  Cart.swift
+//  ProductResults.swift
 //  TimBurtons
 //
 //  Created by Bharath Kamath on 03/02/18.
 //  Copyright © 2018 Bharath Kamath. All rights reserved.
 //
 
-
-struct Cart : Codable {
+/// Struct to hold result of API call
+struct ProductResults : Codable {
     let products: [Product]?
     let code: Int?
     let errorMessage: String?

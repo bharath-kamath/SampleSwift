@@ -60,7 +60,7 @@ class ProductsViewController: BaseViewController {
         
         if segue.identifier == "productDetail" {
             if let destination = segue.destination as? ProductDetailsViewController, let product = sender as? Product {
-                destination.product = product // you can pass value to destination view controller
+                destination.product = product
             }
         }
     }
@@ -70,6 +70,7 @@ class ProductsViewController: BaseViewController {
 
 /// TableView delegate and datasource extension to configure the cell
 extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.productsList.count
     }

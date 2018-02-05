@@ -18,7 +18,7 @@ protocol ProductServiceProtocol {
      - [Products] - Array of products
      - ErrorMessage - Error message
      */
-    func getProducts(completionHandler: @escaping (Result<Cart?, APIError>) -> Void)
+    func getProducts(completionHandler: @escaping (Result<ProductResults?, APIError>) -> Void)
 }
 
 
@@ -26,7 +26,7 @@ protocol ProductServiceProtocol {
 class ProductServices: APIClient {
     
     let session: URLSession
-    
+    /// initialize with custom configuration
     init(configuration: URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
     }
@@ -39,13 +39,13 @@ class ProductServices: APIClient {
 extension ProductServices: ProductServiceProtocol {
     
     
-    func getProducts(completionHandler: @escaping (Result<Cart?, APIError>) -> Void) {
+    func getProducts(completionHandler: @escaping (Result<ProductResults?, APIError>) -> Void) {
 
         /*
         if let request =  APIHelper.getRequestObject(method: "GET", baseURL: Configuration.shared.environment.baseURL, queryParams: APIEndPoints.GetProducts, header: "Auth:XX", body: nil) {
             
-            fetch(with: request, decode: { json -> Cart? in
-                guard let products = json as? Cart else { return  nil }
+            fetch(with: request, decode: { json -> ProductResults? in
+                guard let products = json as? ProductResults else { return  nil }
                 return products
             }, completion: completionHandler)
         }
@@ -57,7 +57,7 @@ extension ProductServices: ProductServiceProtocol {
         }
         do {
             let jsonData = try Data(contentsOf: url)
-            let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)
+            let productsArray = try JSONDecoder().decode(ProductResults.self, from: jsonData)
             print("total is \(productsArray.total)")
             completionHandler(Result.success(productsArray))
         }

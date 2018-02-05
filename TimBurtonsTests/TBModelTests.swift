@@ -16,7 +16,7 @@ class TBModelTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
     }
-    
+    // test case to test Product cost string modelling
     func testProductCostStringFormatting() {
         let prod = Product(id: 1, name: "Latte", size: "small", cost: 2.49, type: "drink")
         let formattedCost = prod.costString(symbol: "$")
@@ -27,13 +27,14 @@ class TBModelTests: XCTestCase {
         
     }
     
+    // test case to check cart total logic
     func testCartTotal() {
         let prod1 = Product(id: 1, name: "Latte", size: "small", cost: 2.49, type: "drink")
         let prod2 = Product(id: 2, name: "Coffee Mocha", size: "small", cost: 2.49, type: "drink")
         let prod3 = Product(id: 3, name: "Cupcake", size: "small", cost: 2.49, type: "food")
         let prod4 = Product(id: 4, name: "Tea", size: "small", cost: 2.49, type: "drink")
         
-        let cart = Cart(products: [prod1, prod2, prod3, prod4], code: 200, errorMessage: nil)
+        let cart = ProductResults(products: [prod1, prod2, prod3, prod4], code: 200, errorMessage: nil)
         XCTAssertTrue(cart.total == 9.96, "Cart total is incorrect")
         
     }

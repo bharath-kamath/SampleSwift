@@ -37,7 +37,7 @@
 		A6F539B8202617480031D7B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F539BA202617480031D7B9 /* Localizable.strings */; };
 		A6F539BF20261AC90031D7B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F539C120261AC90031D7B9 /* InfoPlist.strings */; };
 		A6F539C62026565B0031D7B9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C52026565B0031D7B9 /* Product.swift */; };
-		A6F539C820265EE10031D7B9 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C720265EE10031D7B9 /* Cart.swift */; };
+		A6F539C820265EE10031D7B9 /* ProductResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C720265EE10031D7B9 /* ProductResults.swift */; };
 		A6F539CA2026608A0031D7B9 /* ProductServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C92026608A0031D7B9 /* ProductServices.swift */; };
 		A6F539D220268D500031D7B9 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539D120268D500031D7B9 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -101,7 +101,7 @@
 		A6F539C020261AC90031D7B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6F539C220261AD60031D7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6F539C52026565B0031D7B9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		A6F539C720265EE10031D7B9 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		A6F539C720265EE10031D7B9 /* ProductResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResults.swift; sourceTree = "<group>"; };
 		A6F539C92026608A0031D7B9 /* ProductServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServices.swift; sourceTree = "<group>"; };
 		A6F539D120268D500031D7B9 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F539C52026565B0031D7B9 /* Product.swift */,
-				A6F539C720265EE10031D7B9 /* Cart.swift */,
+				A6F539C720265EE10031D7B9 /* ProductResults.swift */,
 				A68D7AEE2026C936000479C8 /* ModelHelper.swift */,
 			);
 			path = Models;
@@ -445,7 +445,7 @@
 			files = (
 				A663B294202538C5004E5B85 /* Constants.swift in Sources */,
 				A65C2B7B2027C99300753C7F /* GenericAPIClient.swift in Sources */,
-				A6F539C820265EE10031D7B9 /* Cart.swift in Sources */,
+				A6F539C820265EE10031D7B9 /* ProductResults.swift in Sources */,
 				A62DE3CF2027E34600A01D7D /* ProductDetailsViewController.swift in Sources */,
 				A6F539C62026565B0031D7B9 /* Product.swift in Sources */,
 				A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */,
