@@ -33,7 +33,7 @@ class TBModelTests: XCTestCase {
         let prod3 = Product(id: 3, name: "Cupcake", size: "small", cost: 2.49, type: "food")
         let prod4 = Product(id: 4, name: "Tea", size: "small", cost: 2.49, type: "drink")
         
-        let cart = Cart(products: [prod1, prod2, prod3, prod4])
+        let cart = Cart(products: [prod1, prod2, prod3, prod4], code: 200, errorMessage: nil)
         XCTAssertTrue(cart.total == 9.96, "Cart total is incorrect")
         
     }

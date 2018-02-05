@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A65C2B5E20272F3200753C7F /* TBServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */; };
 		A65C2B60202736BE00753C7F /* TBModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B5F202736BE00753C7F /* TBModelTests.swift */; };
 		A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6120273AD600753C7F /* TBDataHelper.swift */; };
 		A65C2B6420273E2800753C7F /* TBProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6320273E2800753C7F /* TBProductsTests.swift */; };
 		A65C2B672027435300753C7F /* TestTBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B662027435300753C7F /* TestTBServices.swift */; };
 		A65C2B6D202779CA00753C7F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6C202779CA00753C7F /* BaseViewController.swift */; };
-		A65C2B6F20277E3D00753C7F /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6E20277E3D00753C7F /* AnalyticsManager.swift */; };
 		A65C2B742027AC8B00753C7F /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = A65C2B732027AC8B00753C7F /* products.json */; };
 		A65C2B762027AC9F00753C7F /* products-error.json in Resources */ = {isa = PBXBuildFile; fileRef = A65C2B752027AC9F00753C7F /* products-error.json */; };
+		A65C2B792027C92600753C7F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B782027C92600753C7F /* Result.swift */; };
+		A65C2B7B2027C99300753C7F /* GenericAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B7A2027C99300753C7F /* GenericAPIClient.swift */; };
+		A65C2B7D2027CDDE00753C7F /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B7C2027CDDE00753C7F /* APIHelper.swift */; };
+		A65C2B802027D44300753C7F /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B7F2027D44300753C7F /* AnalyticsManager.swift */; };
 		A663B2532025251B004E5B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A663B2522025251B004E5B85 /* AppDelegate.swift */; };
 		A663B25A2025251B004E5B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A663B2582025251B004E5B85 /* Main.storyboard */; };
 		A663B25C2025251B004E5B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A663B25B2025251B004E5B85 /* Assets.xcassets */; };
@@ -31,10 +33,9 @@
 		A6F539B220260AFF0031D7B9 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539B120260AFF0031D7B9 /* StoryboardSupport.swift */; };
 		A6F539B8202617480031D7B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F539BA202617480031D7B9 /* Localizable.strings */; };
 		A6F539BF20261AC90031D7B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F539C120261AC90031D7B9 /* InfoPlist.strings */; };
-		A6F539C4202656250031D7B9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C3202656250031D7B9 /* APIManager.swift */; };
 		A6F539C62026565B0031D7B9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C52026565B0031D7B9 /* Product.swift */; };
 		A6F539C820265EE10031D7B9 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C720265EE10031D7B9 /* Cart.swift */; };
-		A6F539CA2026608A0031D7B9 /* TBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C92026608A0031D7B9 /* TBServices.swift */; };
+		A6F539CA2026608A0031D7B9 /* ProductServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539C92026608A0031D7B9 /* ProductServices.swift */; };
 		A6F539D220268D500031D7B9 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F539D120268D500031D7B9 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,15 +57,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBServiceProtocol.swift; sourceTree = "<group>"; };
 		A65C2B5F202736BE00753C7F /* TBModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBModelTests.swift; sourceTree = "<group>"; };
 		A65C2B6120273AD600753C7F /* TBDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBDataHelper.swift; sourceTree = "<group>"; };
 		A65C2B6320273E2800753C7F /* TBProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBProductsTests.swift; sourceTree = "<group>"; };
 		A65C2B662027435300753C7F /* TestTBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTBServices.swift; sourceTree = "<group>"; };
 		A65C2B6C202779CA00753C7F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		A65C2B6E20277E3D00753C7F /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		A65C2B732027AC8B00753C7F /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = SampleResponse/products.json; sourceTree = "<group>"; };
 		A65C2B752027AC9F00753C7F /* products-error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "products-error.json"; path = "SampleResponse/products-error.json"; sourceTree = "<group>"; };
+		A65C2B782027C92600753C7F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A65C2B7A2027C99300753C7F /* GenericAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAPIClient.swift; sourceTree = "<group>"; };
+		A65C2B7C2027CDDE00753C7F /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		A65C2B7F2027D44300753C7F /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		A663B24F2025251B004E5B85 /* TimBurtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimBurtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A663B2522025251B004E5B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A663B2592025251B004E5B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,10 +94,9 @@
 		A6F539BB202617530031D7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6F539C020261AC90031D7B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6F539C220261AD60031D7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A6F539C3202656250031D7B9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		A6F539C52026565B0031D7B9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		A6F539C720265EE10031D7B9 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		A6F539C92026608A0031D7B9 /* TBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBServices.swift; sourceTree = "<group>"; };
+		A6F539C92026608A0031D7B9 /* ProductServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServices.swift; sourceTree = "<group>"; };
 		A6F539D120268D500031D7B9 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,25 @@
 				A65C2B732027AC8B00753C7F /* products.json */,
 			);
 			name = SampleResponse;
+			sourceTree = "<group>";
+		};
+		A65C2B772027C91300753C7F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A6F539C92026608A0031D7B9 /* ProductServices.swift */,
+				A65C2B782027C92600753C7F /* Result.swift */,
+				A65C2B7A2027C99300753C7F /* GenericAPIClient.swift */,
+				A65C2B7C2027CDDE00753C7F /* APIHelper.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A65C2B7E2027D41900753C7F /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				A65C2B7F2027D44300753C7F /* AnalyticsManager.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		A663B2462025251B004E5B85 = {
@@ -250,10 +271,8 @@
 		A663B287202526EC004E5B85 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A6F539C3202656250031D7B9 /* APIManager.swift */,
-				A6F539C92026608A0031D7B9 /* TBServices.swift */,
-				A65C2B5D20272F3200753C7F /* TBServiceProtocol.swift */,
-				A65C2B6E20277E3D00753C7F /* AnalyticsManager.swift */,
+				A65C2B7E2027D41900753C7F /* Analytics */,
+				A65C2B772027C91300753C7F /* Networking */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -408,21 +427,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A663B294202538C5004E5B85 /* Constants.swift in Sources */,
+				A65C2B7B2027C99300753C7F /* GenericAPIClient.swift in Sources */,
 				A6F539C820265EE10031D7B9 /* Cart.swift in Sources */,
 				A6F539C62026565B0031D7B9 /* Product.swift in Sources */,
 				A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */,
-				A65C2B6F20277E3D00753C7F /* AnalyticsManager.swift in Sources */,
+				A65C2B7D2027CDDE00753C7F /* APIHelper.swift in Sources */,
 				A663B2532025251B004E5B85 /* AppDelegate.swift in Sources */,
 				A65C2B6D202779CA00753C7F /* BaseViewController.swift in Sources */,
 				A6F539B220260AFF0031D7B9 /* StoryboardSupport.swift in Sources */,
 				A6F539D220268D500031D7B9 /* ProductTableViewCell.swift in Sources */,
 				A663B2922025336F004E5B85 /* Configuration.swift in Sources */,
+				A65C2B802027D44300753C7F /* AnalyticsManager.swift in Sources */,
 				A6F539A9202560E30031D7B9 /* HomeViewController.swift in Sources */,
 				A6F539AB202561080031D7B9 /* ProductsViewController.swift in Sources */,
-				A65C2B5E20272F3200753C7F /* TBServiceProtocol.swift in Sources */,
 				A68D7AEF2026C936000479C8 /* ModelHelper.swift in Sources */,
-				A6F539C4202656250031D7B9 /* APIManager.swift in Sources */,
-				A6F539CA2026608A0031D7B9 /* TBServices.swift in Sources */,
+				A65C2B792027C92600753C7F /* Result.swift in Sources */,
+				A6F539CA2026608A0031D7B9 /* ProductServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

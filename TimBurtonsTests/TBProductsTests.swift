@@ -38,7 +38,26 @@ class TBProductsTests: XCTestCase {
         XCTAssertTrue(localFetchService.getProductsWasCalled, "Local Fetch Products was not called")
         
         // Test injected products were assigned
-        XCTAssertEqual(localFetchService.products, viewController.productsList, "Data from local fetch products not assigned")
+        if let products = localFetchService.products {
+            XCTAssertEqual(products, viewController.productsList, "Data from local fetch products not assigned")
+        }
+        else {
+            XCTAssertNil(localFetchService.products, "Data from local fetch products not assigned")
+        }
+        
+    }
+    
+    func testFetchProductsFailure() {
+        
+        let localFetchService = TestTBServices()
+        localFetchService.filename = "products-error"
+        viewController.fetchProducts(productService: localFetchService)
+        
+        // Test that the LocalFetch was actually called
+        XCTAssertTrue(localFetchService.getProductsWasCalled, "Local Fetch Products was not called")
+        
+        // Test injected products were assigned
+        XCTAssertEqual(viewController.emptyTableMessage, "We are currently not taking online orders!", "Data from local fetch products not assigned")
         
     }
     

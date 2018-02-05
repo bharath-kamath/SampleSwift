@@ -14,7 +14,7 @@ import UIKit
 class ProductsViewController: BaseViewController {
 
     var productsList: [Product] = []
-    var productsService = TBServices()
+    var productsService = ProductServices()
     var emptyTableMessage = "Please wait while we check with our Kitchen!"
     @IBOutlet weak var tableview: UITableView!
     
@@ -25,16 +25,25 @@ class ProductsViewController: BaseViewController {
     }
 
     
-    func fetchProducts(productService: TBServiceProtocol) {
+    func fetchProducts(productService: ProductServiceProtocol) {
         
-        productService.getProducts(completionHandler: {[weak self]  products, errorMessage in
-            if let error = errorMessage {
-                print("API ERROR - \(error)")
-                self?.emptyTableMessage = error
+        productService.getProducts(completionHandler: {[weak self]  result in
+            
+            switch result {
+            case .success(let cart):
+                if let productsL = cart?.products {
+                    print(productsL)
+                    self?.productsList = productsL
+                }
+                else if let errorMessage = cart?.errorMessage {
+                    print("the error \(errorMessage)")
+                    self?.emptyTableMessage = errorMessage
+                }
+            case .failure(let error):
+                print("the error \(error)")
+                self?.emptyTableMessage = error.localizedDescription
             }
-            else if let productsL = products  {
-                self?.productsList = productsL                
-            }
+            
             self?.tableview.reloadData()
         })
     }
@@ -61,7 +70,7 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
         
         let item = self.productsList[indexPath.row]
-        cell.configure(name: item.name, cost: item.costString(symbol: "$"))        
+        cell.configure(name: item.name, cost: item.costString(symbol: "$"))
         return cell
     }
     

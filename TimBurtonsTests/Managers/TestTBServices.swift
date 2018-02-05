@@ -7,17 +7,34 @@
 //
 
 @testable import TimBurtons
+import UIKit
 
-class TestTBServices: TBServiceProtocol {
+class TestTBServices: ProductServiceProtocol {
+    
     /// Bool value to check if getproducts is called or not
     var getProductsWasCalled = false
     /// Hardcoded products array
-    var products = [Product(id: 1, name: "Latte", size: "small", cost: 2.49, type: "drink"), Product(id: 2, name: "Coffee Mocha", size: "small", cost: 2.49, type: "drink"), Product(id: 3, name: "Cupcake", size: "small", cost: 2.49, type: "food"), Product(id: 4, name: "Tea", size: "small", cost: 2.49, type: "drink")]
-    
+    var products: [Product]?
+    var filename = "products"
     ///function to mock get Products 
-    func getProducts(completionHandler: @escaping ([Product]?, String?) -> Void) {
+    func getProducts(completionHandler: @escaping (Result<Cart?, APIError>) -> Void) {
         getProductsWasCalled = true
-        completionHandler(products, nil)
+        
+        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
+            completionHandler(Result.failure(.invalidData))
+            return
+        }
+        do {
+            let jsonData = try Data(contentsOf: url)
+            let productsArray = try JSONDecoder().decode(Cart.self, from: jsonData)
+            self.products = productsArray.products
+            print("total is \(productsArray.total)")
+            completionHandler(Result.success(productsArray))
+        }
+        catch let error {
+            print(error)
+            completionHandler(Result.failure(.jsonConversionFailure))
+        }
     }
 }
 
