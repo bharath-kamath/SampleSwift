@@ -83,11 +83,28 @@
                     <navigationItem key="navigationItem" title="Products" id="HH4-Ct-NMr"/>
                     <connections>
                         <outlet property="tableview" destination="0MK-r4-ygl" id="vZL-Au-U6R"/>
+                        <segue destination="vFZ-EU-CXv" kind="push" identifier="productDetail" id="iUk-bP-wZH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5s-pn-Ijb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-81" y="-259"/>
+        </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="xYJ-z8-bOp">
+            <objects>
+                <viewController id="vFZ-EU-CXv" customClass="ProductDetailsViewController" customModule="TimBurtons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAv-vY-lWa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="uRE-67-6IQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LkV-dW-ZwB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6H-T0-bGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-260"/>
         </scene>
     </scenes>
     <resources>

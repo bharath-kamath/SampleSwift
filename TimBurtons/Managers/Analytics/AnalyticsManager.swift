@@ -6,8 +6,6 @@
 //  Copyright © 2018 Bharath Kamath. All rights reserved.
 //
 
-
-
 class AnalyticsManager {
     
     // MARK: - Properties

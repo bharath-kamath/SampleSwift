@@ -20,6 +20,8 @@ class ProductsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = AppStrings.Products.Title.localizedTBString()
         self.tableview.tableFooterView = UIView()
         fetchProducts(productService: productsService)        
     }
@@ -48,15 +50,21 @@ class ProductsViewController: BaseViewController {
         })
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "productDetail" {
+            if let destination = segue.destination as? ProductDetailsViewController, let product = sender as? Product {
+                destination.product = product // you can pass value to destination view controller
+            }
+        }
     }
-    */
+    
 
 }
 
@@ -76,6 +84,9 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
     
     // When user taps cell, play the local file, if it's downloaded
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = self.productsList[indexPath.row]
+        self.performSegue(withIdentifier: "productDetail", sender: item)
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

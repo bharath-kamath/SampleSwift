@@ -8,6 +8,7 @@
 
 import  Foundation
 
+/// Extension to get localized strings
 extension String {
     func localizedTBString() -> String {
         return NSLocalizedString(self, comment: "")

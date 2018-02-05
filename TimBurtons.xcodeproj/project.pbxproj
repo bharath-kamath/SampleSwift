@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A62DE3CB2027E04E00A01D7D /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62DE3CA2027E04E00A01D7D /* PaymentManager.swift */; };
+		A62DE3CD2027E27600A01D7D /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62DE3CC2027E27600A01D7D /* StringConstants.swift */; };
+		A62DE3CF2027E34600A01D7D /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62DE3CE2027E34600A01D7D /* ProductDetailsViewController.swift */; };
 		A65C2B60202736BE00753C7F /* TBModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B5F202736BE00753C7F /* TBModelTests.swift */; };
 		A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6120273AD600753C7F /* TBDataHelper.swift */; };
 		A65C2B6420273E2800753C7F /* TBProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65C2B6320273E2800753C7F /* TBProductsTests.swift */; };
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A62DE3CA2027E04E00A01D7D /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
+		A62DE3CC2027E27600A01D7D /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		A62DE3CE2027E34600A01D7D /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		A65C2B5F202736BE00753C7F /* TBModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBModelTests.swift; sourceTree = "<group>"; };
 		A65C2B6120273AD600753C7F /* TBDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBDataHelper.swift; sourceTree = "<group>"; };
 		A65C2B6320273E2800753C7F /* TBProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBProductsTests.swift; sourceTree = "<group>"; };
@@ -125,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A62DE3C92027E03300A01D7D /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				A62DE3CA2027E04E00A01D7D /* PaymentManager.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		A65C2B652027432B00753C7F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +248,7 @@
 				A6F539A8202560E30031D7B9 /* HomeViewController.swift */,
 				A6F539AA202561080031D7B9 /* ProductsViewController.swift */,
 				A65C2B6C202779CA00753C7F /* BaseViewController.swift */,
+				A62DE3CE2027E34600A01D7D /* ProductDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +286,7 @@
 		A663B287202526EC004E5B85 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A62DE3C92027E03300A01D7D /* Payment */,
 				A65C2B7E2027D41900753C7F /* Analytics */,
 				A65C2B772027C91300753C7F /* Networking */,
 			);
@@ -283,6 +299,7 @@
 				A663B2912025336E004E5B85 /* Configuration.swift */,
 				A663B293202538C5004E5B85 /* Constants.swift */,
 				A65C2B6120273AD600753C7F /* TBDataHelper.swift */,
+				A62DE3CC2027E27600A01D7D /* StringConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -429,6 +446,7 @@
 				A663B294202538C5004E5B85 /* Constants.swift in Sources */,
 				A65C2B7B2027C99300753C7F /* GenericAPIClient.swift in Sources */,
 				A6F539C820265EE10031D7B9 /* Cart.swift in Sources */,
+				A62DE3CF2027E34600A01D7D /* ProductDetailsViewController.swift in Sources */,
 				A6F539C62026565B0031D7B9 /* Product.swift in Sources */,
 				A65C2B6220273AD600753C7F /* TBDataHelper.swift in Sources */,
 				A65C2B7D2027CDDE00753C7F /* APIHelper.swift in Sources */,
@@ -438,8 +456,10 @@
 				A6F539D220268D500031D7B9 /* ProductTableViewCell.swift in Sources */,
 				A663B2922025336F004E5B85 /* Configuration.swift in Sources */,
 				A65C2B802027D44300753C7F /* AnalyticsManager.swift in Sources */,
+				A62DE3CB2027E04E00A01D7D /* PaymentManager.swift in Sources */,
 				A6F539A9202560E30031D7B9 /* HomeViewController.swift in Sources */,
 				A6F539AB202561080031D7B9 /* ProductsViewController.swift in Sources */,
+				A62DE3CD2027E27600A01D7D /* StringConstants.swift in Sources */,
 				A68D7AEF2026C936000479C8 /* ModelHelper.swift in Sources */,
 				A65C2B792027C92600753C7F /* Result.swift in Sources */,
 				A6F539CA2026608A0031D7B9 /* ProductServices.swift in Sources */,
