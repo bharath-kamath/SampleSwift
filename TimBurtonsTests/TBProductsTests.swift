@@ -29,7 +29,7 @@ class TBProductsTests: XCTestCase {
         super.tearDown()
     }
     
-    // test fetching of products
+    // Test fetching of products
     func testFetchProducts() {
         
         let localFetchService = TestTBServices()
@@ -48,7 +48,7 @@ class TBProductsTests: XCTestCase {
         
     }
     
-    // test API failure for fetch products
+    // Test API failure for fetch products
     func testFetchProductsFailure() {
         
         let localFetchService = TestTBServices()
